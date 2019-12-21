@@ -21,4 +21,4 @@ test: deps
 	go test -v
 
 build: deps
-	go build -o clip
+	go build -o gitclip

@@ -18,7 +18,7 @@ func (c *InitCommand) Synopsis() string {
 }
 
 func (c *InitCommand) Help() string {
-	return "Usage: clip init <target CLIP STUDIO PAINT file>"
+	return "Usage: gitclip init <target CLIP STUDIO PAINT file>"
 }
 
 func (c *InitCommand) Run(args []string) int {
@@ -58,9 +58,9 @@ func (c *InitCommand) Run(args []string) int {
 	}
 	defer postCommit.Close()
 
-	data := `# Clip https://github.com/lycoris0731/clip
+	data := `# Clip https://github.com/megalon/gitclip
 NAME=$(git log -1 HEAD | head -1 | sed -e 's/commit //g')
-clip export %s $NAME`
+gitclip export %s $NAME`
 
 	postCommit.WriteString(fmt.Sprintf(string(data), args[0]))
 
@@ -82,7 +82,7 @@ clip export %s $NAME`
 	}
 	defer gitignore.Close()
 
-	gitignore.WriteString("# Clip\n.clip")
+	gitignore.WriteString("# GitClip\n.clip")
 	c.ui.Info("Updated .gitignore")
 
 	os.Chmod(postCommitPath, 0755)

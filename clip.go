@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	c := cli.NewCLI("Clip", "1.2.0")
+	c := cli.NewCLI("GitClip", "1.2.0")
 	c.Args = os.Args[1:]
 
 	ui := &cli.ColoredUi{
@@ -25,7 +25,7 @@ func main() {
 
 	exitCode, err := c.Run()
 	if err != nil {
-		ui.Error(fmt.Sprintf("Clip: %s\n", err))
+		ui.Error(fmt.Sprintf("GitClip: %s\n", err))
 	}
 	os.Exit(exitCode)
 }

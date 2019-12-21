@@ -27,7 +27,7 @@ func (c *GifCommand) Synopsis() string {
 }
 
 func (c *GifCommand) Help() string {
-	return `Usage: clip gif [options]
+	return `Usage: gitclip gif [options]
 Options:
 	--output	Output name (default "process.gif")
 	--delay		Delay time between each images (default 1000 ms)

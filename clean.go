@@ -17,7 +17,7 @@ func (c *CleanCommand) Synopsis() string {
 }
 
 func (c *CleanCommand) Help() string {
-	return "Usage: clip clean"
+	return "Usage: gitclip clean"
 }
 
 func (c *CleanCommand) Run(args []string) int {

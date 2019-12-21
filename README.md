@@ -1,10 +1,10 @@
-# Clip
+# GitClip
 [![CircleCI](https://circleci.com/gh/lycoris0731/clip.svg?style=svg&circle-token=0e33c0cfb7bb1105ff821abbe845483d269145f8)](https://circleci.com/gh/lycoris0731/clip)
 A tracking helper for CLIP STUDIO PAINT files with Git  
 ![Demo](./res/out.gif)  
 
 ## Description  
-Track CLIP STUDIO PAINT files with Git.  
+Track CLIP STUDIO PAINT files with Git.
 
 ## Requirements
 - Go v1.7.1 or later
