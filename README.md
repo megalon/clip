@@ -4,40 +4,46 @@ A tracking helper for CLIP STUDIO PAINT files with Git
 ![Demo](./res/out.gif)  
 
 ## Description  
-You can track to CLIP STUDIO PAINT files with Git by using this.  
+Track CLIP STUDIO PAINT files with Git.  
 
-## Equipments
+## Requirements
 - Go v1.7.1 or later
 
 ## Installation
-``` sh
-$ go get github.com/lycoris0731/clip
+Windows 10:
+1. Install GCC
+The easiest way to do this is the TDM-GCC toolset
+http://tdm-gcc.tdragon.net/download
+
+2. Download the go package
+```
+> go get github.com/megalon/gitclip
 ```
 
-## Recommendation
+## Recommendations
 You **should** use Git LFS(Large File Storage) to track clip files.  
-Because Git managing binary files by whole save files of each commits.  
+Git manages binary files by saving the whole file for each commit. 
 
 ## Usage
 First, you should run below command in Git repository.
-``` sh
-$ clip init TARGET_FILE_NAME
+```
+> gitclip init TARGET_FILE_NAME
 ```
 Then, clip creates `.clip` directory and update `post-commit` in Git hooks.  
 All images are saved to `.clip`.  
   
 See the image at the time of a commit.
-``` sh
-$ clip show [COMMIT_HASH ...]
+```
+> gitclip show [COMMIT_HASH ...]
 ```
 Also, you can use `HEAD`.  
-``` sh
-$ clip show HEAD~
+```
+> gitclip show HEAD~
 ```
 
 Create a Gif image about the production process.  
-``` sh
-$ clip gif [command options]
+```
+> gitclip gif [command options]
 ```
 
 ## License
