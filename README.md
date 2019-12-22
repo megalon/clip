@@ -11,9 +11,7 @@ Track CLIP STUDIO PAINT files with Git.
 
 ## Installation
 Windows 10:
-1. Install GCC
-The easiest way to do this is the TDM-GCC toolset
-http://tdm-gcc.tdragon.net/download
+1. Install GCC. The easiest way to do this is the TDM-GCC toolset: http://tdm-gcc.tdragon.net/download
 
 2. Download the go package
 ```
